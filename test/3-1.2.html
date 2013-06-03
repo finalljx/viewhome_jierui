@@ -1,0 +1,46 @@
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+	</head>
+	<body>
+
+		
+		<!-- 设置后退按钮的文字 data-back-btn-text="首页"-->
+
+		<div data-role="page" id="e1" data-add-back-btn="true">
+			<div data-role="header"><h1>后退按钮文字</h1></div>
+			<div data-role="content" >
+				<p>
+					<a href="#e2" > 下一页 </a>
+				</p>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+
+
+		<div data-role="page" id="e2" data-add-back-btn="true">
+			<div data-role="header"><h1>后退按钮文字</h1></div>
+			<div data-role="content" >
+				<p>
+					<a href="#e3" > 尾页 </a>
+				</p>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+
+		<div data-role="page" id="e3" data-add-back-btn="true" data-back-btn-text="首页">
+			<div data-role="header"><h1>后退按钮文字</h1></div>
+			<div data-role="content" >
+				<p>
+					<a href="#e1" > 首页 </a>
+				</p>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

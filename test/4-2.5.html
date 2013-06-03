@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				var strYearVal ="";
+				var strMonthVal ="";
+				var objSelY = $("#selY");
+				var objSelM = $("#selM");
+				//设置复选框时的值
+				objSelY.bind("change",function() {
+					if (objSelY.val() != "年份")
+					{
+						strYearVal = objSelY.val() + ",";
+					}
+					$("#pTip").html(strYearVal + strMonthVal);
+				})
+				objSelM.bind("change",function() {
+					if (objSelM.val() != "月份")
+					{
+						strMonthVal = objSelM.val() + ",";
+					}
+					$("#pTip").html(strYearVal + strMonthVal);
+				})
+			})
+		</script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 选择菜单，，multiple="true"多选 -->
+
+		<div data-role="page">
+			<div data-role="header"><h1>头部栏标题</h1></div>
+			<div data-role="content" >
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<select name="selY" id="selY" data-native-menu="false" multiple="true">
+						<option >年份</option>
+						<option value ="2011">2011</option>
+						<option value ="2012">2012</option>
+					</select>
+
+					<select name="selM" id="selM" data-native-menu="false" multiple="true">
+						<option >月份</option>
+						<option value ="1">1</option>
+						<option value ="2">2</option>
+						<option value ="3">3</option>
+						<option value ="4">4</option>
+						<option value ="5">5</option>
+						<option value ="6">6</option>
+						<option value ="7">7</option>
+						<option value ="8">8</option>
+						<option value ="9">9</option>
+						<option value ="10">10</option>
+						<option value ="11">11</option>
+						<option value ="12">12</option>
+					</select>
+					<p id ="pTip"></p>
+				</fieldset>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				var strChangeVal="";
+				var objCheckBox = $("input[type='checkbox']");
+				//获取复选框选取时的值
+				objCheckBox.bind("change",function(event,ui) {
+					if (this.checked)
+					{
+						strChangeVal + = this.value + ",";
+					}else {
+						strChangeVal = GetChangeValue(objCheckBox);
+					}
+					$("#pTip").html(strChangeVal);
+				})
+			})
+
+			//获取全部选择按钮的值
+			function GetChangeValue(v) {
+				var strS ="";
+				v.each(function () {
+					if (this.checked) 
+					{
+						strS + = this.value + ",";
+					}
+				})
+				return strS;
+			}
+		</script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 两种方式显示复选框  data-type="horizontal" 控制按钮水平显示，默认垂直显示-->
+
+		<div data-role="page">
+			<div data-role="header"><h1>头部栏标题</h1></div>
+			<div data-role="content" >
+				<fieldset data-role="controlgroup" >
+					<input type="checkbox" name="rdoA" id="rdo1" value="1" />
+					<label for="rdo1">A</label>
+					<input type="checkbox" name="rdoA" id="rdo2" value="2" />
+					<label for="rdo2">B</label>
+					<input type="checkbox" name="rdoA" id="rdo3" value="3" />
+					<label for="rdo3">C</label>
+				</fieldset>
+				<p id ="pTip"></p>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

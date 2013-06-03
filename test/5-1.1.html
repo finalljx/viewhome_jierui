@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/test/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/test/js/jquery.cookie.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var objSelTheme = $("#selTheme");
+				objSelTheme.bind("change",function() {
+					//如果选择的值不为空，
+					if (objSelTheme.val() != "")
+					{
+						//使用cookie保存所选择的主题
+						$.cookie("StrTheme",objSelTheme.val(),{
+							path:"/",expires:7
+						})
+						//重新刷新一次页面，运用主题
+						window.location.reload();
+					}
+				})
+			})
+			//如果主题不为空，则运用主题
+			if ($.cookie("StrTheme"))
+			{
+				$.mobile.page.prototype.option.theme =
+				$.cookie("StrTheme");
+			}
+			
+		</script>
+	</head>
+	<body>
+
+		
+	
+		<!-- jqueru mobile 主题 -->
+		<!-- 通过下拉列表框选择并保存主题 -->
+
+		<div data-role="page">
+			<div data-role="header"><h1>头部栏标题</h1></div>
+			<div data-role="content" >
+				<select name="selTheme" id="selTheme" data-native-menu="false">
+					<option value=""> 选择主题 </option>
+						<option value="a"> 主题 a </option>
+						<option value="b"> 主题 b </option>
+						<option value="c"> 主题 c </option>
+						<option value="d"> 主题 d </option>
+						<option value="e"> 主题 e </option>
+				</select>
+			</div>
+			<div data-role="footer" ><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

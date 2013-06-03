@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>头部导航栏</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<link rel="stylesheet" href="/view/test/css/css3.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 自定义导航栏连接按钮的图标-->
+
+		<div data-role="page" id="e1">
+			
+			<div data-role="header" class="nav-3-2-3">
+				<div data-role="navbar" class="nav-3-2-3">
+					<ul>
+						<li> <a href="#" data-icon="custom" class="ui-btn-active books">图书</a></li>
+						<li> <a href="#e2" data-icon="custom" class="music">音乐</a></li>
+						<li> <a href="#" data-icon="custom" class="movie">影视</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div data-role="content" >
+				<p>
+					这是图书页面
+				</p>
+			</div>
+
+
+			<div data-role="footer">
+				<h1>A11工作室版权所有</h1>
+			</div>
+		</div>
+
+
+		<div data-role="page" id="e2">
+			
+			<div data-role="header" class="nav-3-2-3">
+				<div data-role="navbar" class="nav-3-2-3">
+					<ul>
+						<li> <a href="#" data-icon="custom" class="books">图书</a></li>
+						<li> <a href="#e2" data-icon="custom" class="ui-btn-active music">音乐</a></li>
+						<li> <a href="#" data-icon="custom" class="movie">影视</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div data-role="content" >
+				<p>
+					这是音乐页面
+				</p>
+			</div>
+
+
+			<div data-role="footer">
+				<h1>A11工作室版权所有</h1>
+			</div>
+		</div>
+		
+	</body>
+	</html>

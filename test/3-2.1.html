@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 导航栏的基本结构 导航栏添加data-role="navbar" 属性即可，既可以引用系统图标，也可以自动以图标，
+		 ui-btn-active  默认选中状态-->
+
+		<div data-role="page" >
+			<div data-role="header" data-position="inline">
+				<h1>头部栏标题</h1>				
+			</div>
+
+
+			<div data-role="content" >				
+				<p>
+					添加尾部导航栏
+				</p>
+			</div>
+
+
+			<div data-role="footer">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="3-1.1.html" >北京</a></li>
+						<li> <a href="b.html" class="ui-btn-active">上海</a></li>
+						<li> <a href="c.html">广州</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	</html>

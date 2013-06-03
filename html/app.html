@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>移动办公在线安装</title> 
+	
+	<link rel="stylesheet" href="/view/jqueryMobile/jquery.mobile-1.2.0.css" />
+	<link rel="stylesheet" href="/view/jqueryMobile/jquery.mobile-1.2.0-sugon.css" /> 
+	
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+		<script >
+			$(document).ready(function(){
+				var serverUrl = document.location.protocol + "//"+ document.location.host;
+				var iosInstallUrl="/view/install/ios/manifest.plist";
+				var linkurl="itms-services://?action=download-manifest&url="+serverUrl+iosInstallUrl;
+				// alert(linkurl);
+				$("#aIosInstall").attr("href",linkurl);
+			});
+		</script>
+
+</head> 
+<body> 
+
+	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f">
+
+		
+
+	</div>
+
+	<div data-role="content">
+		
+		<ul data-role="listview">
+			<li data-role="list-divider">安卓客户端</li>
+			
+			<li><a href="/view/install/android/jierui.apk"  target="_blank" >安卓客户端在线安装 </a></li>
+			<li data-role="list-divider">苹果客户端</li>
+			
+			<li><a id="aIosInstall" target="_self"  >苹果客户端在线安装 </a></li>
+			
+		</ul>
+	
+
+		
+
+	</div><!-- /content -->
+
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			
+	</div>
+
+	</div><!-- /page -->
+
+	</body>
+	</html>

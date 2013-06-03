@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 在正文中实现可折叠组标记 -->
+
+		<div data-role="page">
+			<div data-role="header"><h1>头部栏标题</h1></div>
+			<div data-role="content" >
+				<div data-role="collapsible-set" >
+					<div  data-role="collapsible" data-collapsed="false">
+						<h3>图书</h3>
+						<p> <a href="#">文艺</a></p>
+						<p> <a href="#">少儿</a></p>
+						<p> <a href="#">社科</a></p>
+					</div>
+					<div data-role="collapsible" >
+					<h3>音乐</h3>
+					<p> <a href="#">流行</a></p>
+					<p> <a href="#">民族</a></p>
+					<p> <a href="#">通俗</a></p>
+					</div>
+					<div data-role="collapsible">
+					<h3>影视</h3>
+					<p> <a href="#">欧美</a></p>
+					<p> <a href="#">怀旧</a></p>
+					<p> <a href="#">娱乐</a></p>
+					</div>
+
+				</div>
+			</div>
+			
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

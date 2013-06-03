@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>jquery mobile 多容器页面结构</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<!-- content="width=device-width,保证了页面和设备的完全填充， initial-scale - 初始的缩放比例  
+		minimum-scale - 允许用户缩放到的最小比例   maximum-scale - 允许用户缩放到的最大比例  
+		user-scalable - 用户是否可以手动缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+
+		<!-- jQery Mobile 移动应用页面需要包含以下三个文件，，注意导入顺序 -->
+		<link rel="stylesheet" href="/view/css/jquery.mobile-1.2.0.min.css" /> 
+		<script src="/view/jqueryMobile/jquery.js"></script>
+		<script src="/view/jqueryMobile/jquery.mobile-1.2.0.js"></script>
+	</head>
+	<body>
+
+		
+	
+		<!-- 内容格式化与计数器  data-filter="true “ 上方自动增加一个搜索框，输入字符时，自动过滤不包含搜索字符的列表项-->
+
+		<div data-role="page">
+			<div data-role="header"><h1>头部栏标题</h1></div>
+			<div data-role="content" >
+				<ul data-role="listview" data-filter="true">
+					<li data-role="list-divider">2012、2013年作品集
+						<span class="ui-li-count">2</span>
+					</li>
+					<li>
+						<a href ="#">
+							<h3>2012年作品</h3>
+							<p><strong>HTML5实战</strong></p>
+							<p>神的合法金卡黛珊神的合法</p>
+							<p class="ui-li-aside">
+								<strong>2012.01</strong>出版
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href ="#">
+							<h3>2013年作品</h3>
+							<p><strong>HTML7实战</strong></p>
+							<p>松岛枫的身份的是否</p>
+							<p class="ui-li-aside">
+								<strong>2013.04</strong>出版
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer"><h1>A11工作室版权所有</h1></div>
+		</div>
+		
+	</body>
+	</html>

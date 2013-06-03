@@ -1,0 +1,10 @@
+
+<!-- saved from url=(0055)http://moa.lovol.com.cn:8088/install/ios/autosetup.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	
+	<title>ios autosetup</title>
+	
+	<script>
+		window.location.href="itms-services://?action=download-manifest&url=http://1.202.226.107:8082/view/install/ios/manifest.plist";
+	</script></head></html>
